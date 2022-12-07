@@ -13,7 +13,8 @@ function Navbar() {
   const [menu, setMenu] = useState(false)
   return (
     <>
-    <div className={`flex flex-row w-full justify-between mb-5 h-16 ${menu == true && "hidden"}`}>
+    <div className="lg:hidden z-10">
+    <div className={`flex flex-row w-full justify-between  h-fit shadow-lg rounded-xl  ${menu == true && "hidden"}`}>
       <div className="">
         <img src={Logo} alt="logo" className="h-[100px] ml-3" />
       </div>
@@ -22,7 +23,7 @@ function Navbar() {
       </div>
     </div>
     
-    <div className={`w-full   bg-white hide-scroll ${menu == false && "hidden"}`}>
+    <div className={`w-full   bg-white hide-scroll h-fit shadow-lg rounded-xl ${menu == false && "hidden"}`}>
       <div className="w-full flex flex-col  ">
         <div className="flex flex-row justify-between mb-5 ">
           <div className="h-20">
@@ -68,6 +69,25 @@ function Navbar() {
           </div>
         </div>
       </div>
+    </div>
+    </div>
+
+    <div className="sm:hidden lg:block z-10 ">
+    <div className={`flex flex-row w-full justify-between mb-5 h-fit shadow-lg rounded-xl  ${menu == true && "hidden"}`}>
+      <div className="">
+        <img src={Logo} alt="logo" className="h-[100px] ml-3" />
+      </div>
+      <div className="mr-5 mt-8 text-lg font-bold" >
+        <ul className="flex flex-row justify-around">
+          <li className="mr-5 hover:bg-red-500 p-2 rounded-2xl cursor-pointer hover:text-white">Inicio</li>
+          <li className="mr-5 hover:bg-red-500 p-2 rounded-2xl cursor-pointer hover:text-white">Nosotros</li>
+          <li className="mr-5 hover:bg-red-500 p-2 rounded-2xl cursor-pointer hover:text-white">Productos</li>
+          <li className="mr-5 hover:bg-red-500 p-2 rounded-2xl cursor-pointer hover:text-white">Preguntas Frecuentes</li>
+          <li className="mr-5 hover:bg-red-500 p-2 rounded-2xl cursor-pointer hover:text-white">Contacto</li>
+          <li className="mr-5 bg-[#222782] p-2 rounded-2xl cursor-pointer text-white">Ingresar</li>
+        </ul>
+      </div>
+    </div>
     </div>
     
     </>
